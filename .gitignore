@@ -1,0 +1,3 @@
+#Archivo y carpetas ignorados
+*.log
+*.temp
