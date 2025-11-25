@@ -34,6 +34,9 @@
             count--; 
         }
         counterElement.textContent = count;
+        if (count === 0) { // Mostrar mensaje solo al llegar a cero
+            document.getElementById('feedback').textContent = "¡Contador en cero!";
+        } else
         document.getElementById('feedback').textContent = "";
          });
     </script>
