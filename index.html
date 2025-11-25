@@ -30,10 +30,12 @@
 
         // Decremento (Implementado en Aporte 1)
         decrementButton.addEventListener('click', () => {
-            count--; // Permite números negativos
-            counterElement.textContent = count;
-            document.getElementById('feedback').textContent = ""; // Limpiar feedback
-        });
+        if (count > 0) { // SOLO si es mayor a cero
+            count--; 
+        }
+        counterElement.textContent = count;
+        document.getElementById('feedback').textContent = "";
+         });
     </script>
 </body>
 </html>
