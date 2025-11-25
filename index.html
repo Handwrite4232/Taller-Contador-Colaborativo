@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Colaborativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p id="feedback"></p> 
+        <h1 id="counter">0</h1>
+        <button id="decrement-btn">Decrementar</button>
+        <button id="increment-btn">Incrementar</button>
+    </div>
+    <script>
+        let count = 0;
+        const counterElement = document.getElementById('counter');
+        const incrementButton = document.getElementById('increment-btn');
+        const decrementButton = document.getElementById('decrement-btn');
+        
+        // --- Lógica Inicial (Aporte 1 / HU-02) ---
+
+        // Incremento
+        incrementButton.addEventListener('click', () => {
+            count++;
+            counterElement.textContent = count;
+            document.getElementById('feedback').textContent = ""; // Limpiar feedback
+        });
+
+        // Decremento (Implementado en Aporte 1)
+        decrementButton.addEventListener('click', () => {
+            count--; // Permite números negativos
+            counterElement.textContent = count;
+            document.getElementById('feedback').textContent = ""; // Limpiar feedback
+        });
+    </script>
+</body>
+</html>
